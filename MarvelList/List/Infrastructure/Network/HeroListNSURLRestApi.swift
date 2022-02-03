@@ -9,13 +9,15 @@ import Foundation
 
 class HeroListNSURLRestApi: HeroListRestApi {
     private let session: URLSession
+    private let domain: DomainNetwork<Endpoint.List>
     
-    init(session: URLSession = URLSession.shared) {
+    init(session: URLSession, domain: DomainNetwork<Endpoint.List>) {
         self.session = session
+        self.domain = domain
     }
     
     func getHeroList(offset: Int, completionHandler: @escaping (Result<ListEntity, ErrorEntity>) -> Void) {
-        guard let url = URL(string: "https://gateway.marvel.com/v1/public/characters?limit=30&offset=\(offset)&ts=1&apikey=fa68d95890cde9ab96d2d32f31dc7506&hash=3b47358f138e20e9f00c231c430da7a0") else {
+        guard let url = URL(string: String(format: domain.url(for: .list), offset) ) else {
             completionHandler(.failure(ErrorEntity()))
             return
         }
@@ -33,8 +35,7 @@ class HeroListNSURLRestApi: HeroListRestApi {
             do{
                 let listEntity = try JSONDecoder().decode(ListEntity.self, from: data)
                 completionHandler(.success(listEntity))
-            } catch let error {
-                print(error)
+            } catch {
                 completionHandler(.failure(ErrorEntity()))
             }
         }

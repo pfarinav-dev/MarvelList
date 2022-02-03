@@ -6,5 +6,6 @@
 //
 
 protocol ListView: AnyObject {
-    func loadHeroes(_ list: (listData: ListData, heroes: [Heroe]))
+    func loadHeroes(_ list: HeroList)
+    func showError(_ error: ErrorModel)
 }

@@ -1,4 +1,4 @@
-struct Heroe {
+struct Hero {
     let identifier: Int
     let name: String
     let description: String

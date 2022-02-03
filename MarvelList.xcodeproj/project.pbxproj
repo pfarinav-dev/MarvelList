@@ -24,12 +24,12 @@
 		A895A5C927AAFEED00FFA2AA /* HeroListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5C827AAFEED00FFA2AA /* HeroListRepository.swift */; };
 		A895A5CB27AAFF2300FFA2AA /* HeroListApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5CA27AAFF2300FFA2AA /* HeroListApiRepository.swift */; };
 		A895A5CF27AAFFD500FFA2AA /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5CE27AAFFD500FFA2AA /* ErrorModel.swift */; };
-		A895A5D227AB003600FFA2AA /* Heroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5D127AB003600FFA2AA /* Heroe.swift */; };
+		A895A5D227AB003600FFA2AA /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5D127AB003600FFA2AA /* Hero.swift */; };
 		A895A5D427AB00BB00FFA2AA /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5D327AB00BB00FFA2AA /* Mapper.swift */; };
-		A895A5D727AB018100FFA2AA /* HeroeModelToEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5D627AB018100FFA2AA /* HeroeModelToEntityMapper.swift */; };
+		A895A5D727AB018100FFA2AA /* HeroModelToEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5D627AB018100FFA2AA /* HeroModelToEntityMapper.swift */; };
 		A895A5D927AB03BC00FFA2AA /* ErrorModelToEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5D827AB03BC00FFA2AA /* ErrorModelToEntityMapper.swift */; };
 		A895A5DD27AB05D600FFA2AA /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5DC27AB05D600FFA2AA /* UseCase.swift */; };
-		A895A5DF27AB064300FFA2AA /* ShowHeroeListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5DE27AB064300FFA2AA /* ShowHeroeListUseCase.swift */; };
+		A895A5DF27AB064300FFA2AA /* ShowHeroListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5DE27AB064300FFA2AA /* ShowHeroListUseCase.swift */; };
 		A895A5E227AB070F00FFA2AA /* ListServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5E127AB070F00FFA2AA /* ListServiceLocator.swift */; };
 		A895A5E527AB08D000FFA2AA /* ListConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5E427AB08D000FFA2AA /* ListConstants.swift */; };
 		A895A5E727AB09FF00FFA2AA /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5E627AB09FF00FFA2AA /* ViewControllerFactory.swift */; };
@@ -39,6 +39,35 @@
 		A895A5F127AB2E5C00FFA2AA /* ListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5F027AB2E5C00FFA2AA /* ListPresenterProtocol.swift */; };
 		A895A5F327AB2E7400FFA2AA /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5F227AB2E7400FFA2AA /* ListPresenter.swift */; };
 		A895A5F527AB2E8F00FFA2AA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5F427AB2E8E00FFA2AA /* ListView.swift */; };
+		A895A5F727AB39D800FFA2AA /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5F627AB39D800FFA2AA /* Typealias.swift */; };
+		A895A5FA27AB3B3500FFA2AA /* HeroListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5F927AB3B3500FFA2AA /* HeroListCell.swift */; };
+		A895A5FD27AB424000FFA2AA /* ThumbnailLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5FC27AB424000FFA2AA /* ThumbnailLoader.swift */; };
+		A895A5FF27AB693C00FFA2AA /* Digits.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A5FE27AB693C00FFA2AA /* Digits.swift */; };
+		A895A60127AB699E00FFA2AA /* HeroListCellConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A60027AB699E00FFA2AA /* HeroListCellConstants.swift */; };
+		A895A60427AB6C3F00FFA2AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A60327AB6C3F00FFA2AA /* Constants.swift */; };
+		A895A60727AB6CD600FFA2AA /* DomainNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A60627AB6CD600FFA2AA /* DomainNetwork.swift */; };
+		A895A60927AB6D5D00FFA2AA /* HeroListNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A60827AB6D5D00FFA2AA /* HeroListNetwork.swift */; };
+		A895A60B27AB6DDE00FFA2AA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A60A27AB6DDD00FFA2AA /* Endpoint.swift */; };
+		A895A60E27AB755100FFA2AA /* HeroListNSURLRestApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A60D27AB755100FFA2AA /* HeroListNSURLRestApiTests.swift */; };
+		A895A61227AB75B200FFA2AA /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A61027AB75B200FFA2AA /* URLSessionMock.swift */; };
+		A895A61327AB75B200FFA2AA /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A61127AB75B200FFA2AA /* URLSessionDataTaskMock.swift */; };
+		A895A61627AB766D00FFA2AA /* GET_getHeroes_200.json in Resources */ = {isa = PBXBuildFile; fileRef = A895A61527AB766D00FFA2AA /* GET_getHeroes_200.json */; };
+		A895A61827AB7AFF00FFA2AA /* GET_getHeroes_400.json in Resources */ = {isa = PBXBuildFile; fileRef = A895A61727AB7AFF00FFA2AA /* GET_getHeroes_400.json */; };
+		A895A61A27AB7CC400FFA2AA /* HeroListNetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A61927AB7CC400FFA2AA /* HeroListNetworkMock.swift */; };
+		A895A61C27AB812300FFA2AA /* HeroListNetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A61B27AB812300FFA2AA /* HeroListNetworkTest.swift */; };
+		A895A61F27AB823900FFA2AA /* HeroModelToEntityMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A61E27AB823900FFA2AA /* HeroModelToEntityMapperTests.swift */; };
+		A895A62227AB827500FFA2AA /* XCTestCase+JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A62127AB827500FFA2AA /* XCTestCase+JSONLoader.swift */; };
+		A895A62427AB83AC00FFA2AA /* Equatables.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A62327AB83AC00FFA2AA /* Equatables.swift */; };
+		A895A62627AB863200FFA2AA /* ListModelToEntityMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A62527AB863200FFA2AA /* ListModelToEntityMapperTests.swift */; };
+		A895A62A27AB86EA00FFA2AA /* HeroListApiRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A62927AB86EA00FFA2AA /* HeroListApiRepositoryTest.swift */; };
+		A895A62C27AB872000FFA2AA /* HeroListRestApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A62B27AB872000FFA2AA /* HeroListRestApiMock.swift */; };
+		A895A63027AB8B2800FFA2AA /* ShowHeroListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A62F27AB8B2800FFA2AA /* ShowHeroListUseCaseTests.swift */; };
+		A895A63227AB8B6700FFA2AA /* HeroListRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63127AB8B6700FFA2AA /* HeroListRepositoryMock.swift */; };
+		A895A63527AB8EE100FFA2AA /* ListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63427AB8EE100FFA2AA /* ListPresenterTests.swift */; };
+		A895A63727AB8F3300FFA2AA /* GetHeroesUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63627AB8F3300FFA2AA /* GetHeroesUseCaseMock.swift */; };
+		A895A63927AB922800FFA2AA /* ListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63827AB922800FFA2AA /* ListViewMock.swift */; };
+		A895A63C27AB98C400FFA2AA /* HeroListCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63B27AB98C400FFA2AA /* HeroListCellTests.swift */; };
+		A895A64627ABA1B100FFA2AA /* ErrorModelToEntityMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A64527ABA1B100FFA2AA /* ErrorModelToEntityMapperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,12 +111,12 @@
 		A895A5C827AAFEED00FFA2AA /* HeroListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListRepository.swift; sourceTree = "<group>"; };
 		A895A5CA27AAFF2300FFA2AA /* HeroListApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListApiRepository.swift; sourceTree = "<group>"; };
 		A895A5CE27AAFFD500FFA2AA /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
-		A895A5D127AB003600FFA2AA /* Heroe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroe.swift; sourceTree = "<group>"; };
+		A895A5D127AB003600FFA2AA /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		A895A5D327AB00BB00FFA2AA /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
-		A895A5D627AB018100FFA2AA /* HeroeModelToEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeModelToEntityMapper.swift; sourceTree = "<group>"; };
+		A895A5D627AB018100FFA2AA /* HeroModelToEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModelToEntityMapper.swift; sourceTree = "<group>"; };
 		A895A5D827AB03BC00FFA2AA /* ErrorModelToEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModelToEntityMapper.swift; sourceTree = "<group>"; };
 		A895A5DC27AB05D600FFA2AA /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
-		A895A5DE27AB064300FFA2AA /* ShowHeroeListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeroeListUseCase.swift; sourceTree = "<group>"; };
+		A895A5DE27AB064300FFA2AA /* ShowHeroListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeroListUseCase.swift; sourceTree = "<group>"; };
 		A895A5E127AB070F00FFA2AA /* ListServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServiceLocator.swift; sourceTree = "<group>"; };
 		A895A5E427AB08D000FFA2AA /* ListConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListConstants.swift; sourceTree = "<group>"; };
 		A895A5E627AB09FF00FFA2AA /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
@@ -97,6 +126,35 @@
 		A895A5F027AB2E5C00FFA2AA /* ListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterProtocol.swift; sourceTree = "<group>"; };
 		A895A5F227AB2E7400FFA2AA /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		A895A5F427AB2E8E00FFA2AA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		A895A5F627AB39D800FFA2AA /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		A895A5F927AB3B3500FFA2AA /* HeroListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListCell.swift; sourceTree = "<group>"; };
+		A895A5FC27AB424000FFA2AA /* ThumbnailLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailLoader.swift; sourceTree = "<group>"; };
+		A895A5FE27AB693C00FFA2AA /* Digits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits.swift; sourceTree = "<group>"; };
+		A895A60027AB699E00FFA2AA /* HeroListCellConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListCellConstants.swift; sourceTree = "<group>"; };
+		A895A60327AB6C3F00FFA2AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A895A60627AB6CD600FFA2AA /* DomainNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainNetwork.swift; sourceTree = "<group>"; };
+		A895A60827AB6D5D00FFA2AA /* HeroListNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListNetwork.swift; sourceTree = "<group>"; };
+		A895A60A27AB6DDD00FFA2AA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		A895A60D27AB755100FFA2AA /* HeroListNSURLRestApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListNSURLRestApiTests.swift; sourceTree = "<group>"; };
+		A895A61027AB75B200FFA2AA /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		A895A61127AB75B200FFA2AA /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		A895A61527AB766D00FFA2AA /* GET_getHeroes_200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_getHeroes_200.json; sourceTree = "<group>"; };
+		A895A61727AB7AFF00FFA2AA /* GET_getHeroes_400.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_getHeroes_400.json; sourceTree = "<group>"; };
+		A895A61927AB7CC400FFA2AA /* HeroListNetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListNetworkMock.swift; sourceTree = "<group>"; };
+		A895A61B27AB812300FFA2AA /* HeroListNetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListNetworkTest.swift; sourceTree = "<group>"; };
+		A895A61E27AB823900FFA2AA /* HeroModelToEntityMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModelToEntityMapperTests.swift; sourceTree = "<group>"; };
+		A895A62127AB827500FFA2AA /* XCTestCase+JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+JSONLoader.swift"; sourceTree = "<group>"; };
+		A895A62327AB83AC00FFA2AA /* Equatables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatables.swift; sourceTree = "<group>"; };
+		A895A62527AB863200FFA2AA /* ListModelToEntityMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModelToEntityMapperTests.swift; sourceTree = "<group>"; };
+		A895A62927AB86EA00FFA2AA /* HeroListApiRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListApiRepositoryTest.swift; sourceTree = "<group>"; };
+		A895A62B27AB872000FFA2AA /* HeroListRestApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListRestApiMock.swift; sourceTree = "<group>"; };
+		A895A62F27AB8B2800FFA2AA /* ShowHeroListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeroListUseCaseTests.swift; sourceTree = "<group>"; };
+		A895A63127AB8B6700FFA2AA /* HeroListRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListRepositoryMock.swift; sourceTree = "<group>"; };
+		A895A63427AB8EE100FFA2AA /* ListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTests.swift; sourceTree = "<group>"; };
+		A895A63627AB8F3300FFA2AA /* GetHeroesUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesUseCaseMock.swift; sourceTree = "<group>"; };
+		A895A63827AB922800FFA2AA /* ListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewMock.swift; sourceTree = "<group>"; };
+		A895A63B27AB98C400FFA2AA /* HeroListCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListCellTests.swift; sourceTree = "<group>"; };
+		A895A64527ABA1B100FFA2AA /* ErrorModelToEntityMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModelToEntityMapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				A895A59E27AAEAD100FFA2AA /* App */,
-				A895A5BA27AAF81E00FFA2AA /* Constants */,
 				A895A5B527AAF71400FFA2AA /* Core */,
 				A895A5C027AAFA5B00FFA2AA /* List */,
 			);
@@ -158,6 +215,10 @@
 		A895A58427AAE6B400FFA2AA /* MarvelListTests */ = {
 			isa = PBXGroup;
 			children = (
+				A895A62027AB826500FFA2AA /* Utilities */,
+				A895A60F27AB75A200FFA2AA /* Mocks */,
+				A895A64127AB9E8A00FFA2AA /* Core */,
+				A895A60227AB6B5700FFA2AA /* List */,
 				A895A58527AAE6B400FFA2AA /* MarvelListTests.swift */,
 				A895A58727AAE6B400FFA2AA /* Info.plist */,
 			);
@@ -190,6 +251,7 @@
 			children = (
 				A895A5AD27AAF61A00FFA2AA /* HeroListRestApi.swift */,
 				A895A5B327AAF6D000FFA2AA /* HeroListNSURLRestApi.swift */,
+				A895A60827AB6D5D00FFA2AA /* HeroListNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -205,12 +267,17 @@
 		A895A5B527AAF71400FFA2AA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A895A60527AB6CC600FFA2AA /* Infrastructure */,
+				A895A5FB27AB422700FFA2AA /* Utilities */,
+				A895A5BA27AAF81E00FFA2AA /* Constants */,
 				A895A5CC27AAFFBA00FFA2AA /* Domain */,
 				A895A5B627AAF71E00FFA2AA /* Data */,
 				A895A5D327AB00BB00FFA2AA /* Mapper.swift */,
 				A895A5D827AB03BC00FFA2AA /* ErrorModelToEntityMapper.swift */,
 				A895A5E627AB09FF00FFA2AA /* ViewControllerFactory.swift */,
 				A895A5EA27AB0A6100FFA2AA /* ViewControllerFactoryType.swift */,
+				A895A5F627AB39D800FFA2AA /* Typealias.swift */,
+				A895A60A27AB6DDD00FFA2AA /* Endpoint.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -235,6 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				A895A5BB27AAF82E00FFA2AA /* HTTPMethod.swift */,
+				A895A5FE27AB693C00FFA2AA /* Digits.swift */,
+				A895A60327AB6C3F00FFA2AA /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -318,7 +387,7 @@
 		A895A5D027AB002300FFA2AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A895A5D127AB003600FFA2AA /* Heroe.swift */,
+				A895A5D127AB003600FFA2AA /* Hero.swift */,
 				A895A5EC27AB2BCB00FFA2AA /* ListData.swift */,
 			);
 			path = Model;
@@ -327,7 +396,7 @@
 		A895A5D527AB016600FFA2AA /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
-				A895A5D627AB018100FFA2AA /* HeroeModelToEntityMapper.swift */,
+				A895A5D627AB018100FFA2AA /* HeroModelToEntityMapper.swift */,
 				A895A5EE27AB2C1A00FFA2AA /* ListModelToEntityMapper.swift */,
 			);
 			path = Mapper;
@@ -336,7 +405,7 @@
 		A895A5DA27AB05B000FFA2AA /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				A895A5DE27AB064300FFA2AA /* ShowHeroeListUseCase.swift */,
+				A895A5DE27AB064300FFA2AA /* ShowHeroListUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -360,12 +429,166 @@
 		A895A5E327AB08AE00FFA2AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A895A5F827AB3B1000FFA2AA /* Cell */,
 				A895A57227AAE6B200FFA2AA /* ListViewController.swift */,
 				A895A5F027AB2E5C00FFA2AA /* ListPresenterProtocol.swift */,
 				A895A5F227AB2E7400FFA2AA /* ListPresenter.swift */,
 				A895A5F427AB2E8E00FFA2AA /* ListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A895A5F827AB3B1000FFA2AA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A895A5F927AB3B3500FFA2AA /* HeroListCell.swift */,
+				A895A60027AB699E00FFA2AA /* HeroListCellConstants.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A895A5FB27AB422700FFA2AA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A895A5FC27AB424000FFA2AA /* ThumbnailLoader.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A895A60227AB6B5700FFA2AA /* List */ = {
+			isa = PBXGroup;
+			children = (
+				A895A60C27AB752200FFA2AA /* Infrastructure */,
+				A895A62727AB86CC00FFA2AA /* Data */,
+				A895A62D27AB8B0A00FFA2AA /* Domain */,
+				A895A63327AB8EBB00FFA2AA /* View */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		A895A60527AB6CC600FFA2AA /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A895A60627AB6CD600FFA2AA /* DomainNetwork.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A895A60C27AB752200FFA2AA /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A895A61427AB765800FFA2AA /* JSON */,
+				A895A60D27AB755100FFA2AA /* HeroListNSURLRestApiTests.swift */,
+				A895A61B27AB812300FFA2AA /* HeroListNetworkTest.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A895A60F27AB75A200FFA2AA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A895A61127AB75B200FFA2AA /* URLSessionDataTaskMock.swift */,
+				A895A61027AB75B200FFA2AA /* URLSessionMock.swift */,
+				A895A61927AB7CC400FFA2AA /* HeroListNetworkMock.swift */,
+				A895A62B27AB872000FFA2AA /* HeroListRestApiMock.swift */,
+				A895A63127AB8B6700FFA2AA /* HeroListRepositoryMock.swift */,
+				A895A63627AB8F3300FFA2AA /* GetHeroesUseCaseMock.swift */,
+				A895A63827AB922800FFA2AA /* ListViewMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A895A61427AB765800FFA2AA /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A895A61527AB766D00FFA2AA /* GET_getHeroes_200.json */,
+				A895A61727AB7AFF00FFA2AA /* GET_getHeroes_400.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		A895A61D27AB822E00FFA2AA /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				A895A61E27AB823900FFA2AA /* HeroModelToEntityMapperTests.swift */,
+				A895A62527AB863200FFA2AA /* ListModelToEntityMapperTests.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		A895A62027AB826500FFA2AA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A895A62127AB827500FFA2AA /* XCTestCase+JSONLoader.swift */,
+				A895A62327AB83AC00FFA2AA /* Equatables.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A895A62727AB86CC00FFA2AA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A895A62827AB86D900FFA2AA /* Repository */,
+				A895A61D27AB822E00FFA2AA /* Mapper */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A895A62827AB86D900FFA2AA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A895A62927AB86EA00FFA2AA /* HeroListApiRepositoryTest.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A895A62D27AB8B0A00FFA2AA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A895A62E27AB8B1300FFA2AA /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A895A62E27AB8B1300FFA2AA /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				A895A62F27AB8B2800FFA2AA /* ShowHeroListUseCaseTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A895A63327AB8EBB00FFA2AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A895A63A27AB98B600FFA2AA /* Cell */,
+				A895A63427AB8EE100FFA2AA /* ListPresenterTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A895A63A27AB98B600FFA2AA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A895A63B27AB98C400FFA2AA /* HeroListCellTests.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A895A64127AB9E8A00FFA2AA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A895A64227AB9E9A00FFA2AA /* Infrastructure */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A895A64227AB9E9A00FFA2AA /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A895A64527ABA1B100FFA2AA /* ErrorModelToEntityMapperTests.swift */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,6 +703,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A895A61827AB7AFF00FFA2AA /* GET_getHeroes_400.json in Resources */,
+				A895A61627AB766D00FFA2AA /* GET_getHeroes_200.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,25 +723,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				A895A5B927AAF73700FFA2AA /* ErrorEntity.swift in Sources */,
+				A895A60427AB6C3F00FFA2AA /* Constants.swift in Sources */,
 				A895A5EB27AB0A6100FFA2AA /* ViewControllerFactoryType.swift in Sources */,
+				A895A5FD27AB424000FFA2AA /* ThumbnailLoader.swift in Sources */,
+				A895A60727AB6CD600FFA2AA /* DomainNetwork.swift in Sources */,
 				A895A5AE27AAF61A00FFA2AA /* HeroListRestApi.swift in Sources */,
 				A895A5C427AAFA8B00FFA2AA /* ListEntity.swift in Sources */,
 				A895A5F127AB2E5C00FFA2AA /* ListPresenterProtocol.swift in Sources */,
 				A895A5B427AAF6D000FFA2AA /* HeroListNSURLRestApi.swift in Sources */,
 				A895A5E227AB070F00FFA2AA /* ListServiceLocator.swift in Sources */,
 				A895A5D427AB00BB00FFA2AA /* Mapper.swift in Sources */,
-				A895A5DF27AB064300FFA2AA /* ShowHeroeListUseCase.swift in Sources */,
+				A895A5DF27AB064300FFA2AA /* ShowHeroListUseCase.swift in Sources */,
 				A895A57327AAE6B200FFA2AA /* ListViewController.swift in Sources */,
+				A895A5FF27AB693C00FFA2AA /* Digits.swift in Sources */,
 				A895A5F327AB2E7400FFA2AA /* ListPresenter.swift in Sources */,
 				A895A5C927AAFEED00FFA2AA /* HeroListRepository.swift in Sources */,
 				A895A5CB27AAFF2300FFA2AA /* HeroListApiRepository.swift in Sources */,
+				A895A5FA27AB3B3500FFA2AA /* HeroListCell.swift in Sources */,
 				A895A5EF27AB2C1A00FFA2AA /* ListModelToEntityMapper.swift in Sources */,
+				A895A60B27AB6DDE00FFA2AA /* Endpoint.swift in Sources */,
 				A895A5BC27AAF82E00FFA2AA /* HTTPMethod.swift in Sources */,
+				A895A60927AB6D5D00FFA2AA /* HeroListNetwork.swift in Sources */,
+				A895A5F727AB39D800FFA2AA /* Typealias.swift in Sources */,
 				A895A56F27AAE6B200FFA2AA /* AppDelegate.swift in Sources */,
 				A895A5E527AB08D000FFA2AA /* ListConstants.swift in Sources */,
-				A895A5D727AB018100FFA2AA /* HeroeModelToEntityMapper.swift in Sources */,
+				A895A5D727AB018100FFA2AA /* HeroModelToEntityMapper.swift in Sources */,
 				A895A5D927AB03BC00FFA2AA /* ErrorModelToEntityMapper.swift in Sources */,
-				A895A5D227AB003600FFA2AA /* Heroe.swift in Sources */,
+				A895A60127AB699E00FFA2AA /* HeroListCellConstants.swift in Sources */,
+				A895A5D227AB003600FFA2AA /* Hero.swift in Sources */,
 				A895A5AA27AAF50000FFA2AA /* HeroEntity.swift in Sources */,
 				A895A57127AAE6B200FFA2AA /* SceneDelegate.swift in Sources */,
 				A895A5DD27AB05D600FFA2AA /* UseCase.swift in Sources */,
@@ -532,7 +766,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A895A62627AB863200FFA2AA /* ListModelToEntityMapperTests.swift in Sources */,
+				A895A61C27AB812300FFA2AA /* HeroListNetworkTest.swift in Sources */,
+				A895A64627ABA1B100FFA2AA /* ErrorModelToEntityMapperTests.swift in Sources */,
+				A895A63027AB8B2800FFA2AA /* ShowHeroListUseCaseTests.swift in Sources */,
+				A895A62427AB83AC00FFA2AA /* Equatables.swift in Sources */,
+				A895A63527AB8EE100FFA2AA /* ListPresenterTests.swift in Sources */,
+				A895A61227AB75B200FFA2AA /* URLSessionMock.swift in Sources */,
+				A895A62C27AB872000FFA2AA /* HeroListRestApiMock.swift in Sources */,
+				A895A61327AB75B200FFA2AA /* URLSessionDataTaskMock.swift in Sources */,
+				A895A63927AB922800FFA2AA /* ListViewMock.swift in Sources */,
+				A895A63227AB8B6700FFA2AA /* HeroListRepositoryMock.swift in Sources */,
+				A895A61F27AB823900FFA2AA /* HeroModelToEntityMapperTests.swift in Sources */,
+				A895A63C27AB98C400FFA2AA /* HeroListCellTests.swift in Sources */,
+				A895A62227AB827500FFA2AA /* XCTestCase+JSONLoader.swift in Sources */,
 				A895A58627AAE6B400FFA2AA /* MarvelListTests.swift in Sources */,
+				A895A60E27AB755100FFA2AA /* HeroListNSURLRestApiTests.swift in Sources */,
+				A895A62A27AB86EA00FFA2AA /* HeroListApiRepositoryTest.swift in Sources */,
+				A895A63727AB8F3300FFA2AA /* GetHeroesUseCaseMock.swift in Sources */,
+				A895A61A27AB7CC400FFA2AA /* HeroListNetworkMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

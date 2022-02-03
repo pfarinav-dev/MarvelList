@@ -5,4 +5,12 @@
 //  Created by Patricio Fariña on 02-02-22.
 //
 
-class ErrorModel: Error {}
+struct ErrorModel: Error {
+    let title: String
+    let description: String
+
+    init() {
+        self.title = Constants.defaultErrorTitle
+        self.description = Constants.defaultErrorDescription
+    }
+}

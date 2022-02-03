@@ -6,5 +6,5 @@
 //
 
 protocol HeroListRepository {
-    func getHeroesList(offset: Int, completionHandler: @escaping (Result<(listData: ListData, heroes: [Heroe]), ErrorModel>) -> Void)
+    func getHeroesList(offset: Int, completionHandler: @escaping (Result<HeroList, ErrorModel>) -> Void)
 }

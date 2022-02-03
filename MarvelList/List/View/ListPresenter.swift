@@ -10,11 +10,11 @@ import Foundation
 class ListPresenter: ListPresenterProtocol {
     weak var view: ListView?
     
-    let useCase: UseCase<(listData: ListData, heroes: [Heroe])>
+    private let useCase: UseCase<HeroList>
     
     private var isFetching = false
     
-    init(useCase: UseCase<(listData: ListData, heroes: [Heroe])>) {
+    init(useCase: UseCase<HeroList>) {
         self.useCase = useCase
     }
     
@@ -25,21 +25,16 @@ class ListPresenter: ListPresenterProtocol {
         
         isFetching = true
         
-        useCase.execute(data: ["offset": offset]) {[weak self] result in
-            guard let self = self else {
-                return
-            }
-            
-            DispatchQueue.main.async {
+        useCase.execute(data: [ListConstants.offsetKey: offset]) { result in
+           // DispatchQueue.main.async {
                 self.isFetching = false
                 switch result {
                 case .success(let list):
                     self.view?.loadHeroes(list)
                 case .failure(let error):
-                    print(error)
+                    self.view?.showError(error)
                 }
-            }
-
+           // }
         }
     }
     

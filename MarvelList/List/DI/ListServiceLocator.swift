@@ -8,15 +8,16 @@
 import Foundation
 
 class ListServiceLocator {
-    private var session = URLSession.shared
+    private let session = URLSession.shared
+    private let domain = HeroListNetwork()
     
-    private lazy var restApi = HeroListNSURLRestApi(session: session)
+    private lazy var restApi = HeroListNSURLRestApi(session: session, domain: domain)
     
     private lazy var repository = HeroListApiRepository(
         restApi: restApi,
-        heroeMapper: HeroeModelToEntityMapper(),
+        heroMapper: HeroModelToEntityMapper(),
         listMapper: ListModelToEntityMapper(),
         errorMapper: ErrorModelToEntityMapper())
     
-    lazy var showListUseCase = ShowHeroeListUseCase(repository: repository)
+    lazy var showListUseCase = ShowHeroListUseCase(repository: repository)
 }

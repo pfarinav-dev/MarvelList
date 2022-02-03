@@ -11,13 +11,18 @@ class ListViewController: UIViewController {
     var presenter: ListPresenterProtocol?
     var serviceLocator: ListServiceLocator?
     let tableView = UITableView(frame: .zero)
-    private var heroes = [Heroe]()
     
+    private var isSearching = false
+    private var isFiltering = false
+    private var heroes = [Hero]()
+    private var filteredHeroes = [Hero]()
     private var totalHeroes: Int = .zero
     private var currentPage: Int = .zero
     
+    lazy var searchBar: UISearchBar = UISearchBar()
+    
     private var offset: Int {
-        return currentPage * 30
+        return currentPage * ListConstants.limit
     }
     
     convenience init(presenter: ListPresenterProtocol, serviceLocator: ListServiceLocator) {
@@ -30,19 +35,49 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = ListConstants.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .search, target: self,
+            action: #selector(toggleSearch))
         prepareTableView()
-        
         presenter?.getHeroes(offset: offset)
     }
     
-    
+    @objc
+    private func toggleSearch() {
+        isSearching.toggle()
+        isFiltering.toggle()
+        
+        if isSearching {
+            searchBar.searchBarStyle = UISearchBar.Style.default
+            searchBar.placeholder = ListConstants.searchPlaceholder
+            searchBar.sizeToFit()
+            searchBar.isTranslucent = false
+            searchBar.backgroundImage = UIImage()
+            navigationItem.titleView = searchBar
+            searchBar.delegate = self
+            filteredHeroes = heroes
+            
+            searchBar.becomeFirstResponder()
+            
+            navigationItem.rightBarButtonItem = UIBarButtonItem(
+                barButtonSystemItem: .close, target: self,
+                action: #selector(toggleSearch))
+        } else {
+            navigationItem.titleView = nil
+            navigationItem.rightBarButtonItem = UIBarButtonItem(
+                barButtonSystemItem: .search, target: self,
+                action: #selector(toggleSearch))
+        }
+        
+        tableView.reloadData()
+    }
     
     private func prepareTableView() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
-        tableView.delegate = self
         tableView.dataSource = self
         tableView.prefetchDataSource = self
+        tableView.rowHeight = ListConstants.rowHeight
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -50,13 +85,13 @@ class ListViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
         ])
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "generic")
+        tableView.register(HeroListCell.self, forCellReuseIdentifier: ListConstants.cellIdentifier)
     }
     
-    private func calculateIndexPathsToReload(from newHeroes: [Heroe]) -> [IndexPath] {
+    private func calculateIndexPathsToReload(from newHeroes: [Hero]) -> [IndexPath] {
         let startIndex = heroes.count - newHeroes.count
         let endIndex = min(startIndex + heroes.count, totalHeroes)
-        return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
+        return (startIndex..<endIndex).map { IndexPath(row: $0, section: .zero) }
     }
     
     fileprivate func isLoadingCell(for indexPath: IndexPath) -> Bool {
@@ -72,29 +107,25 @@ class ListViewController: UIViewController {
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return totalHeroes
+        return isFiltering ? filteredHeroes.count : totalHeroes
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "generic", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListConstants.cellIdentifier, for: indexPath) as! HeroListCell
         
-        
+        cell.prepare()
         if isLoadingCell(for: indexPath) {
-            cell.textLabel?.text = "Loading..."
+            cell.name = ListConstants.cellDefaultText
         } else {
-            cell.textLabel?.text = "\(indexPath.row) - \(heroes[indexPath.row].name)"
+            let displayedHeroes = isFiltering ? filteredHeroes : heroes
+            cell.name = displayedHeroes[indexPath.row].name
+            
+            if let url = URL(string: displayedHeroes[indexPath.row].thumbnail) {
+                ThumbnailLoader.load(url, container: cell.imageContainer)
+            }
         }
+        
         return cell
-    }
-}
-
-extension ListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        UITableView.automaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        UITableView.automaticDimension
     }
 }
 
@@ -107,16 +138,35 @@ extension ListViewController: UITableViewDataSourcePrefetching {
 }
 
 extension ListViewController: ListView {
-    func loadHeroes(_ list: (listData: ListData, heroes: [Heroe])) {
-        self.currentPage += 1
-        self.totalHeroes = list.listData.total
-        self.heroes.append(contentsOf: list.heroes)
-        
-        if self.currentPage > 1 {
-            let indexPathsToReload = self.calculateIndexPathsToReload(from: list.heroes)
-            self.tableView.reloadRows(at: indexPathsToReload, with: .automatic)
-        } else {
-            self.tableView.reloadData()
+    func showError(_ error: ErrorModel) {
+        //Alert Error
+    }
+    
+    func loadHeroes(_ list: HeroList) {
+        DispatchQueue.main.async {
+            self.currentPage += Digits.one
+            self.totalHeroes = list.listData.total
+            self.heroes.append(contentsOf: list.heroes)
+            
+            if self.currentPage > Digits.one, !self.isSearching {
+                let indexPathsToReload = self.calculateIndexPathsToReload(from: list.heroes)
+                self.tableView.reloadRows(at: indexPathsToReload, with: .automatic)
+            } else {
+                self.tableView.reloadData()
+            }
         }
+    }
+}
+
+extension ListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            filteredHeroes = heroes
+        } else {
+            filteredHeroes = heroes.filter({ $0.name.lowercased().contains(searchText.lowercased()) })
+        }
+        
+        tableView.reloadData()
+        
     }
 }
