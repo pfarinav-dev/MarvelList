@@ -205,9 +205,9 @@
 		A895A56D27AAE6B200FFA2AA /* MarvelList */ = {
 			isa = PBXGroup;
 			children = (
-				A895A59E27AAEAD100FFA2AA /* App */,
+				A895A59E27AAEAD100FFA2AA /* Supporting Files */,
 				A895A5B527AAF71400FFA2AA /* Core */,
-				A895A5C027AAFA5B00FFA2AA /* List */,
+				A895A64827AC235E00FFA2AA /* Modules */,
 			);
 			path = MarvelList;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			path = MarvelListUITests;
 			sourceTree = "<group>";
 		};
-		A895A59E27AAEAD100FFA2AA /* App */ = {
+		A895A59E27AAEAD100FFA2AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				A895A57C27AAE6B400FFA2AA /* Info.plist */,
@@ -243,7 +243,7 @@
 				A895A56E27AAE6B200FFA2AA /* AppDelegate.swift */,
 				A895A57027AAE6B200FFA2AA /* SceneDelegate.swift */,
 			);
-			name = App;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A895A5B127AAF6A400FFA2AA /* Network */ = {
@@ -589,6 +589,14 @@
 				A895A64527ABA1B100FFA2AA /* ErrorModelToEntityMapperTests.swift */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A895A64827AC235E00FFA2AA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A895A5C027AAFA5B00FFA2AA /* List */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

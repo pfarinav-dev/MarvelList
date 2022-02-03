@@ -11,6 +11,7 @@ class ListViewController: UIViewController {
     var presenter: ListPresenterProtocol?
     var serviceLocator: ListServiceLocator?
     let tableView = UITableView(frame: .zero)
+    let spinner = UIActivityIndicatorView(style: .large)
     
     private var isSearching = false
     private var isFiltering = false
@@ -33,6 +34,12 @@ class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        spinner.center = view.center
+        spinner.startAnimating()
+        spinner.hidesWhenStopped = true
+        view.addSubview(spinner)
+        
+        tableView.isHidden = true
         view.backgroundColor = .white
         title = ListConstants.title
         navigationItem.rightBarButtonItem = UIBarButtonItem(
@@ -143,7 +150,14 @@ extension ListViewController: ListView {
     }
     
     func loadHeroes(_ list: HeroList) {
+        
+        
         DispatchQueue.main.async {
+            self.spinner.stopAnimating()
+            if self.tableView.isHidden {
+                self.tableView.isHidden = false
+            }
+            
             self.currentPage += Digits.one
             self.totalHeroes = list.listData.total
             self.heroes.append(contentsOf: list.heroes)
