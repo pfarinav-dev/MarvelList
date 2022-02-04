@@ -97,6 +97,9 @@
 		A895A68727ACCFDB00FFA2AA /* DetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68627ACCFDB00FFA2AA /* DetailConstants.swift */; };
 		A895A68927ACD0FB00FFA2AA /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68827ACD0FB00FFA2AA /* ListViewControllerTests.swift */; };
 		A895A68B27ACD13000FFA2AA /* ListPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68A27ACD13000FFA2AA /* ListPresenterMock.swift */; };
+		A895A68D27ACD2DE00FFA2AA /* NavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68C27ACD2DE00FFA2AA /* NavigationControllerMock.swift */; };
+		A895A68F27ACD9E000FFA2AA /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68E27ACD9E000FFA2AA /* DetailViewControllerTests.swift */; };
+		A895A69127ACDA2900FFA2AA /* DetailPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A69027ACDA2900FFA2AA /* DetailPresenterMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +216,9 @@
 		A895A68627ACCFDB00FFA2AA /* DetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailConstants.swift; sourceTree = "<group>"; };
 		A895A68827ACD0FB00FFA2AA /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
 		A895A68A27ACD13000FFA2AA /* ListPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterMock.swift; sourceTree = "<group>"; };
+		A895A68C27ACD2DE00FFA2AA /* NavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerMock.swift; sourceTree = "<group>"; };
+		A895A68E27ACD9E000FFA2AA /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
+		A895A69027ACDA2900FFA2AA /* DetailPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -553,6 +559,8 @@
 				A895A63827AB922800FFA2AA /* ListViewMock.swift */,
 				A895A67B27ACC72C00FFA2AA /* DetailViewMock.swift */,
 				A895A68A27ACD13000FFA2AA /* ListPresenterMock.swift */,
+				A895A69027ACDA2900FFA2AA /* DetailPresenterMock.swift */,
+				A895A68C27ACD2DE00FFA2AA /* NavigationControllerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -745,6 +753,7 @@
 			children = (
 				A895A67D27ACC8A900FFA2AA /* Cell */,
 				A895A67727ACC62000FFA2AA /* DetailPresenterTests.swift */,
+				A895A68E27ACD9E000FFA2AA /* DetailViewControllerTests.swift */,
 			);
 			path = Hero;
 			sourceTree = "<group>";
@@ -964,6 +973,7 @@
 				A895A62427AB83AC00FFA2AA /* Equatables.swift in Sources */,
 				A895A63527AB8EE100FFA2AA /* ListPresenterTests.swift in Sources */,
 				A895A61227AB75B200FFA2AA /* URLSessionMock.swift in Sources */,
+				A895A68F27ACD9E000FFA2AA /* DetailViewControllerTests.swift in Sources */,
 				A895A62C27AB872000FFA2AA /* HeroListRestApiMock.swift in Sources */,
 				A895A61327AB75B200FFA2AA /* URLSessionDataTaskMock.swift in Sources */,
 				A895A63927AB922800FFA2AA /* ListViewMock.swift in Sources */,
@@ -971,7 +981,9 @@
 				A895A61F27AB823900FFA2AA /* HeroModelToEntityMapperTests.swift in Sources */,
 				A895A63C27AB98C400FFA2AA /* HeroListCellTests.swift in Sources */,
 				A895A67C27ACC72C00FFA2AA /* DetailViewMock.swift in Sources */,
+				A895A69127ACDA2900FFA2AA /* DetailPresenterMock.swift in Sources */,
 				A895A62227AB827500FFA2AA /* XCTestCase+JSONLoader.swift in Sources */,
+				A895A68D27ACD2DE00FFA2AA /* NavigationControllerMock.swift in Sources */,
 				A895A58627AAE6B400FFA2AA /* MarvelListTests.swift in Sources */,
 				A895A66327AC462F00FFA2AA /* EventsToEntityMapperTests.swift in Sources */,
 				A895A60E27AB755100FFA2AA /* HeroListNSURLRestApiTests.swift in Sources */,

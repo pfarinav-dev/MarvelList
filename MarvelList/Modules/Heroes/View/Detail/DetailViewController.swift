@@ -82,20 +82,26 @@ extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch DetailViewCellType.allCases[indexPath.row] {
         case .avatar:
-            let cell = tableView.dequeueReusableCell(withIdentifier: DetailConstants.avatarIdentifier, for: indexPath) as! HeroDetailAvatarCell
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: DetailConstants.avatarIdentifier,
+                for: indexPath) as! HeroDetailAvatarCell
             cell.prepare(with: avatarImage ?? UIImage())
             cell.selectionStyle = .none
             return cell
         case .description:
-            let cell = tableView.dequeueReusableCell(withIdentifier: DetailConstants.genericIdentifier, for: indexPath)
-            cell.textLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: DetailConstants.genericIdentifier,
+                for: indexPath)
+            cell.textLabel?.font = DetailConstants.descriptionFont
             cell.textLabel?.adjustsFontSizeToFitWidth = true
             cell.textLabel?.numberOfLines = .zero
             cell.textLabel?.textAlignment = .justified
             cell.textLabel?.text = hero?.description
             return cell
         case .events:
-            let cell = tableView.dequeueReusableCell(withIdentifier: DetailConstants.eventIdentifier, for: indexPath) as! HeroDetailEventsCell
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: DetailConstants.eventIdentifier,
+                for: indexPath) as! HeroDetailEventsCell
             cell.prepare(with: events ?? [])
             return cell
         }
@@ -106,7 +112,7 @@ extension DetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch DetailViewCellType.allCases[indexPath.row] {
         case .avatar:
-            return 300
+            return DetailConstants.avatarRowHeight
         case .description:
             return UITableView.automaticDimension
         case .events:
