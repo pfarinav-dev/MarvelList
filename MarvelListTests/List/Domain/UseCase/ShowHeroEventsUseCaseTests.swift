@@ -1,5 +1,5 @@
 //
-//  ShowHeroListUseCaseTests.swift
+//  ShowHeroEventsUseCaseTests.swift
 //  MarvelListTests
 //
 //  Created by Patricio Fariña on 03-02-22.
@@ -8,14 +8,14 @@
 import XCTest
 @testable import MarvelList
 
-class ShowHeroListUseCaseTests: XCTestCase {
-    var sut: ShowHeroListUseCase!
+class ShowHeroEventsUseCaseTests: XCTestCase {
+    var sut: ShowHeroEventsUseCase!
     var repository: HeroListRepositoryMock!
     
     override func setUp() {
         super.setUp()
         repository = HeroListRepositoryMock()
-        sut = ShowHeroListUseCase(repository: repository)
+        sut = ShowHeroEventsUseCase(repository: repository)
     }
     
     override func tearDown() {
@@ -24,11 +24,11 @@ class ShowHeroListUseCaseTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSuccesfulCallWithShouldReturnSuccessResultWithHeroList() {
+    func testSuccesfulCallWithShouldReturnSuccessResultWithEvents() {
         
-        let exp = expectation(description: "testSuccesfulCallShouldReturnSuccessResultWithEntity")
+        let exp = expectation(description: "testSuccesfulCallWithShouldReturnSuccessResultWithEvents")
         
-        sut.execute(data: ["offset": 0]) { result in
+        sut.execute(data: ["identifier": 0]) { result in
             guard case .success(_) = result else {
                 return XCTFail("Expected HeroList")
             }
@@ -43,7 +43,7 @@ class ShowHeroListUseCaseTests: XCTestCase {
         repository.shouldSuccess = false
         let exp = expectation(description: "testFailureCallShouldReturnFailureResultWithErrorModel")
         
-        sut.execute(data: ["offset": 0]) { result in
+        sut.execute(data: ["identifier": 0]) { result in
             guard case .failure(_) = result else {
                 return XCTFail("Expected HeroList")
             }
@@ -54,8 +54,8 @@ class ShowHeroListUseCaseTests: XCTestCase {
         wait(for: [exp], timeout: 2)
     }
     
-    func testInvalidOffsetShouldReturnFailureResultWithErrorModelAndNotCallRepository() {
-        let exp = expectation(description: "testInvalidOffsetShouldReturnFailureResultWithErrorModelAndNotCallRepository")
+    func testInvalidIdentifierShouldReturnFailureResultWithErrorModelAndNotCallRepository() {
+        let exp = expectation(description: "testInvalidIdentifierShouldReturnFailureResultWithErrorModelAndNotCallRepository")
         
         sut.execute(data: nil) { result in
             guard case .failure(_) = result else {

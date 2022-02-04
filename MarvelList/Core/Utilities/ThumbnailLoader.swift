@@ -10,7 +10,7 @@ import UIKit
 let dataCache = NSCache<NSString, NSData>()
 
 class ThumbnailLoader {
-    class func load(_ url: URL, container: UIImageView) {
+    func load(_ url: URL, container: UIImageView) {
         if let cachedData = dataCache.object(forKey: url.absoluteString as NSString) {
             let data = cachedData as Data
             DispatchQueue.main.async {

@@ -9,11 +9,11 @@ import XCTest
 @testable import MarvelList
 
 class HeroListNetworkTest: XCTestCase {
-    var sut: HeroListNetwork!
+    var sut: HeroesNetwork!
     
     override func setUp() {
         super.setUp()
-        sut = HeroListNetwork()
+        sut = HeroesNetwork()
     }
     
     override func tearDown() {
@@ -22,10 +22,20 @@ class HeroListNetworkTest: XCTestCase {
     }
     
     func testURLForListShouldReturnStringWithOffsetPlaceholder() {
-        let expected = "https://gateway.marvel.com/v1/public/characters?limit=30&offset=%d&ts=1&apikey=fa68d95890cde9ab96d2d32f31dc7506&hash=3b47358f138e20e9f00c231c430da7a0"
+        let expected = "https://gateway.marvel.com/v1/public/characters?limit=30&ts=1&apikey=fa68d95890cde9ab96d2d32f31dc7506&hash=3b47358f138e20e9f00c231c430da7a0&offset=%d"
         
         let urlString = sut.url(for: .list)
         
         XCTAssertEqual(expected, urlString)
     }
+    
+    func testURLForDetailShouldReturnStringWithIdentifierPlaceholder() {
+        let expected = "https://gateway.marvel.com/v1/public/characters/%d?limit=30&ts=1&apikey=fa68d95890cde9ab96d2d32f31dc7506&hash=3b47358f138e20e9f00c231c430da7a0"
+        
+        let urlString = sut.url(for: .detail)
+        
+        XCTAssertEqual(expected, urlString)
+    }
+    
+    
 }

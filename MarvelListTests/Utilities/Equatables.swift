@@ -28,6 +28,23 @@ extension Thumbnail: Equatable {
     public static func == (lhs: Thumbnail, rhs: Thumbnail) -> Bool {
         return lhs.path == rhs.path && lhs.extension.rawValue == rhs.extension.rawValue
     }
-    
-    
+}
+
+extension ListDetailEntity: Equatable {
+    public static func == (lhs: ListDetailEntity, rhs: ListDetailEntity) -> Bool {
+        return lhs.data.events == rhs.data.events
+    }
+}
+
+extension EventsDetailEntity: Equatable {
+    public static func == (lhs: EventsDetailEntity, rhs: EventsDetailEntity) -> Bool {
+        return lhs.events.available == rhs.events.available
+            && lhs.events.items == rhs.events.items
+    }
+}
+
+extension EventItemDetailEntity: Equatable {
+    public static func == (lhs: EventItemDetailEntity, rhs: EventItemDetailEntity) -> Bool {
+        return lhs.name == rhs.name
+    }
 }
