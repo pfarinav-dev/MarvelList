@@ -14,8 +14,22 @@ class HeroListCell: UITableViewCell {
         }
     }
     
-    let imageContainer = UIImageView(frame: .zero)
+    var image: UIImage? {
+        didSet {
+            imageContainer.image = image
+        }
+    }
+    
+    var task: URLSessionDataTask?
+    
+    private let imageContainer = UIImageView(frame: .zero)
     private let nameLabel = UILabel(frame: .zero)
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageContainer.image = HeroListCellConstants.defaultImage
+        task?.cancel()
+    }
     
     private func prepareImageContainer() {
         imageContainer.translatesAutoresizingMaskIntoConstraints = false

@@ -10,14 +10,11 @@ import UIKit
 let dataCache = NSCache<NSString, NSData>()
 
 class ThumbnailLoader {
-    func load(_ url: URL, container: UIImageView) {
+    func load(_ url: URL, completionHandler: @escaping(Data) -> Void) -> URLSessionDataTask? {
         if let cachedData = dataCache.object(forKey: url.absoluteString as NSString) {
             let data = cachedData as Data
-            DispatchQueue.main.async {
-                let image = UIImage(data: data)
-                container.image = image
-            }
-            return
+            completionHandler(data)
+            return nil
         }
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
@@ -26,13 +23,12 @@ class ThumbnailLoader {
             }
         
             dataCache.setObject(data as NSData, forKey: url.absoluteString as NSString)
-            DispatchQueue.main.async {
-                let image = UIImage(data: data)
-                container.image = image
-            }
+            completionHandler(data)
         })
-        
+
         task.resume()
+
+        return task
     }
 }
 

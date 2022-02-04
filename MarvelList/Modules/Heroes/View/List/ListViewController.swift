@@ -18,6 +18,7 @@ class ListViewController: UIViewController {
     private var filteredHeroes = [Hero]()
     private var totalHeroes: Int = .zero
     private var currentPage: Int = .zero
+    fileprivate var thumbnailLoader = ThumbnailLoader()
     
     lazy var searchBar: UISearchBar = UISearchBar()
     
@@ -126,7 +127,12 @@ extension ListViewController: UITableViewDataSource {
             let displayedHeroes = isFiltering ? filteredHeroes : heroes
             cell.name = displayedHeroes[indexPath.row].name
             if let url = URL(string: displayedHeroes[indexPath.row].thumbnail) {
-                ThumbnailLoader().load(url, container: cell.imageContainer)
+                let task = thumbnailLoader.load(url) { data in
+                    DispatchQueue.main.async {
+                        cell.image = UIImage(data: data)
+                    }
+                }
+                cell.task = task
             }
         }
         
@@ -149,7 +155,7 @@ extension ListViewController: UITableViewDelegate {
         let viewController = ViewControllerFactory.viewController(type: .detail) as! DetailViewController
         let cell = tableView.cellForRow(at: indexPath) as! HeroListCell
         viewController.hero = hero
-        viewController.avatarImage = cell.imageContainer.image
+        viewController.avatarImage = cell.image
         navigationController?.pushViewController(viewController, animated: true)
         
     }
