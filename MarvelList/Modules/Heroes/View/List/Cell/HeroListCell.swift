@@ -20,7 +20,7 @@ class HeroListCell: UITableViewCell {
         }
     }
     
-    var task: URLSessionDataTask?
+    var thumbnailTask: URLSessionDataTask?
     
     private let imageContainer = UIImageView(frame: .zero)
     private let nameLabel = UILabel(frame: .zero)
@@ -28,7 +28,7 @@ class HeroListCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         imageContainer.image = HeroListCellConstants.defaultImage
-        task?.cancel()
+        thumbnailTask?.cancel()
     }
     
     private func prepareImageContainer() {

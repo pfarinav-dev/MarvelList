@@ -14,17 +14,29 @@ class HeroDetailAvatarCell: UITableViewCell {
         avatar.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(avatar)
         avatar.contentMode = .scaleAspectFill
-        avatar.layer.cornerRadius = 10
+        avatar.layer.cornerRadius = HeroDetailAvatarCellConstants.cornerRadius
         avatar.layer.masksToBounds = true
-        avatar.layer.borderWidth = 1
+        avatar.layer.borderWidth = CGFloat(Digits.one)
         avatar.layer.borderColor = UIColor.darkGray.cgColor
         avatar.image = image
         
         NSLayoutConstraint.activate([
-            avatar.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
-            avatar.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            avatar.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
-            avatar.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20)
+            avatar.topAnchor.constraint(
+                equalTo: contentView.topAnchor,
+                constant: HeroDetailAvatarCellConstants.Anchors.top
+            ),
+            avatar.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
+                constant: HeroDetailAvatarCellConstants.Anchors.trailing
+            ),
+            avatar.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor,
+                constant: HeroDetailAvatarCellConstants.Anchors.bottom
+            ),
+            avatar.leadingAnchor.constraint(
+                equalTo: contentView.leadingAnchor,
+                constant: HeroDetailAvatarCellConstants.Anchors.leading
+            )
         ])
     }
 }

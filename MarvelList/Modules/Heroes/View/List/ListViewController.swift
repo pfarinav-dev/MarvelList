@@ -132,7 +132,7 @@ extension ListViewController: UITableViewDataSource {
                         cell.image = UIImage(data: data)
                     }
                 }
-                cell.task = task
+                cell.thumbnailTask = task
             }
         }
         

@@ -10,7 +10,7 @@ import Foundation
 
 let HLGHNotification = NSNotification.Name(rawValue: "HLGHNotification")
 
-class GetHeroesUseCaseMock: UseCase<HeroList> {
+class ShowHeroesUseCaseMock: UseCase<HeroList> {
     var shouldSuccess = true
     
     override func execute(data: [String : Any]?, completionHandler: @escaping (Result<HeroList, ErrorModel>) -> Void) {

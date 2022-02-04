@@ -64,7 +64,7 @@
 		A895A63027AB8B2800FFA2AA /* ShowHeroListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A62F27AB8B2800FFA2AA /* ShowHeroListUseCaseTests.swift */; };
 		A895A63227AB8B6700FFA2AA /* HeroListRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63127AB8B6700FFA2AA /* HeroListRepositoryMock.swift */; };
 		A895A63527AB8EE100FFA2AA /* ListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63427AB8EE100FFA2AA /* ListPresenterTests.swift */; };
-		A895A63727AB8F3300FFA2AA /* GetHeroesUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63627AB8F3300FFA2AA /* GetHeroesUseCaseMock.swift */; };
+		A895A63727AB8F3300FFA2AA /* ShowHeroesUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63627AB8F3300FFA2AA /* ShowHeroesUseCaseMock.swift */; };
 		A895A63927AB922800FFA2AA /* ListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63827AB922800FFA2AA /* ListViewMock.swift */; };
 		A895A63C27AB98C400FFA2AA /* HeroListCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A63B27AB98C400FFA2AA /* HeroListCellTests.swift */; };
 		A895A64627ABA1B100FFA2AA /* ErrorModelToEntityMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A64527ABA1B100FFA2AA /* ErrorModelToEntityMapperTests.swift */; };
@@ -87,6 +87,16 @@
 		A895A67027AC565100FFA2AA /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A66F27AC565100FFA2AA /* DetailPresenter.swift */; };
 		A895A67227AC565F00FFA2AA /* DetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A67127AC565F00FFA2AA /* DetailPresenterProtocol.swift */; };
 		A895A67427AC567600FFA2AA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A67327AC567600FFA2AA /* DetailView.swift */; };
+		A895A67827ACC62000FFA2AA /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A67727ACC62000FFA2AA /* DetailPresenterTests.swift */; };
+		A895A67A27ACC67700FFA2AA /* ShowHeroEventsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A67927ACC67700FFA2AA /* ShowHeroEventsUseCaseMock.swift */; };
+		A895A67C27ACC72C00FFA2AA /* DetailViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A67B27ACC72C00FFA2AA /* DetailViewMock.swift */; };
+		A895A67F27ACC92F00FFA2AA /* HeroDetailAvatarCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A67E27ACC92F00FFA2AA /* HeroDetailAvatarCellTests.swift */; };
+		A895A68127ACC96E00FFA2AA /* HeroDetailAvatarCellConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68027ACC96D00FFA2AA /* HeroDetailAvatarCellConstants.swift */; };
+		A895A68327ACCAD800FFA2AA /* HeroDetailEventsCellConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68227ACCAD800FFA2AA /* HeroDetailEventsCellConstants.swift */; };
+		A895A68527ACCD5400FFA2AA /* HeroDetailEventsCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68427ACCD5400FFA2AA /* HeroDetailEventsCellTests.swift */; };
+		A895A68727ACCFDB00FFA2AA /* DetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68627ACCFDB00FFA2AA /* DetailConstants.swift */; };
+		A895A68927ACD0FB00FFA2AA /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68827ACD0FB00FFA2AA /* ListViewControllerTests.swift */; };
+		A895A68B27ACD13000FFA2AA /* ListPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68A27ACD13000FFA2AA /* ListPresenterMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,7 +180,7 @@
 		A895A62F27AB8B2800FFA2AA /* ShowHeroListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeroListUseCaseTests.swift; sourceTree = "<group>"; };
 		A895A63127AB8B6700FFA2AA /* HeroListRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListRepositoryMock.swift; sourceTree = "<group>"; };
 		A895A63427AB8EE100FFA2AA /* ListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTests.swift; sourceTree = "<group>"; };
-		A895A63627AB8F3300FFA2AA /* GetHeroesUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesUseCaseMock.swift; sourceTree = "<group>"; };
+		A895A63627AB8F3300FFA2AA /* ShowHeroesUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeroesUseCaseMock.swift; sourceTree = "<group>"; };
 		A895A63827AB922800FFA2AA /* ListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewMock.swift; sourceTree = "<group>"; };
 		A895A63B27AB98C400FFA2AA /* HeroListCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListCellTests.swift; sourceTree = "<group>"; };
 		A895A64527ABA1B100FFA2AA /* ErrorModelToEntityMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModelToEntityMapperTests.swift; sourceTree = "<group>"; };
@@ -193,6 +203,16 @@
 		A895A66F27AC565100FFA2AA /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		A895A67127AC565F00FFA2AA /* DetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterProtocol.swift; sourceTree = "<group>"; };
 		A895A67327AC567600FFA2AA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A895A67727ACC62000FFA2AA /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
+		A895A67927ACC67700FFA2AA /* ShowHeroEventsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeroEventsUseCaseMock.swift; sourceTree = "<group>"; };
+		A895A67B27ACC72C00FFA2AA /* DetailViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewMock.swift; sourceTree = "<group>"; };
+		A895A67E27ACC92F00FFA2AA /* HeroDetailAvatarCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailAvatarCellTests.swift; sourceTree = "<group>"; };
+		A895A68027ACC96D00FFA2AA /* HeroDetailAvatarCellConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailAvatarCellConstants.swift; sourceTree = "<group>"; };
+		A895A68227ACCAD800FFA2AA /* HeroDetailEventsCellConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailEventsCellConstants.swift; sourceTree = "<group>"; };
+		A895A68427ACCD5400FFA2AA /* HeroDetailEventsCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailEventsCellTests.swift; sourceTree = "<group>"; };
+		A895A68627ACCFDB00FFA2AA /* DetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailConstants.swift; sourceTree = "<group>"; };
+		A895A68827ACD0FB00FFA2AA /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
+		A895A68A27ACD13000FFA2AA /* ListPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -528,8 +548,11 @@
 				A895A61927AB7CC400FFA2AA /* HeroListNetworkMock.swift */,
 				A895A62B27AB872000FFA2AA /* HeroListRestApiMock.swift */,
 				A895A63127AB8B6700FFA2AA /* HeroListRepositoryMock.swift */,
-				A895A63627AB8F3300FFA2AA /* GetHeroesUseCaseMock.swift */,
+				A895A63627AB8F3300FFA2AA /* ShowHeroesUseCaseMock.swift */,
+				A895A67927ACC67700FFA2AA /* ShowHeroEventsUseCaseMock.swift */,
 				A895A63827AB922800FFA2AA /* ListViewMock.swift */,
+				A895A67B27ACC72C00FFA2AA /* DetailViewMock.swift */,
+				A895A68A27ACD13000FFA2AA /* ListPresenterMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -601,8 +624,8 @@
 		A895A63327AB8EBB00FFA2AA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A895A63A27AB98B600FFA2AA /* Cell */,
-				A895A63427AB8EE100FFA2AA /* ListPresenterTests.swift */,
+				A895A67627ACC5E700FFA2AA /* Hero */,
+				A895A67527ACC5DE00FFA2AA /* List */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -657,6 +680,7 @@
 				A895A66F27AC565100FFA2AA /* DetailPresenter.swift */,
 				A895A67127AC565F00FFA2AA /* DetailPresenterProtocol.swift */,
 				A895A67327AC567600FFA2AA /* DetailView.swift */,
+				A895A68627ACCFDB00FFA2AA /* DetailConstants.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -699,7 +723,37 @@
 			isa = PBXGroup;
 			children = (
 				A895A66A27AC4B6C00FFA2AA /* HeroDetailAvatarCell.swift */,
+				A895A68027ACC96D00FFA2AA /* HeroDetailAvatarCellConstants.swift */,
 				A895A66D27AC516500FFA2AA /* HeroDetailEventsCell.swift */,
+				A895A68227ACCAD800FFA2AA /* HeroDetailEventsCellConstants.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A895A67527ACC5DE00FFA2AA /* List */ = {
+			isa = PBXGroup;
+			children = (
+				A895A63A27AB98B600FFA2AA /* Cell */,
+				A895A63427AB8EE100FFA2AA /* ListPresenterTests.swift */,
+				A895A68827ACD0FB00FFA2AA /* ListViewControllerTests.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		A895A67627ACC5E700FFA2AA /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				A895A67D27ACC8A900FFA2AA /* Cell */,
+				A895A67727ACC62000FFA2AA /* DetailPresenterTests.swift */,
+			);
+			path = Hero;
+			sourceTree = "<group>";
+		};
+		A895A67D27ACC8A900FFA2AA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A895A67E27ACC92F00FFA2AA /* HeroDetailAvatarCellTests.swift */,
+				A895A68427ACCD5400FFA2AA /* HeroDetailEventsCellTests.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -837,6 +891,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A895A68727ACCFDB00FFA2AA /* DetailConstants.swift in Sources */,
 				A895A5B927AAF73700FFA2AA /* ErrorEntity.swift in Sources */,
 				A895A60427AB6C3F00FFA2AA /* Constants.swift in Sources */,
 				A895A5EB27AB0A6100FFA2AA /* ViewControllerFactoryType.swift in Sources */,
@@ -874,7 +929,9 @@
 				A895A5D927AB03BC00FFA2AA /* ErrorModelToEntityMapper.swift in Sources */,
 				A895A67027AC565100FFA2AA /* DetailPresenter.swift in Sources */,
 				A895A60127AB699E00FFA2AA /* HeroListCellConstants.swift in Sources */,
+				A895A68327ACCAD800FFA2AA /* HeroDetailEventsCellConstants.swift in Sources */,
 				A895A5D227AB003600FFA2AA /* Hero.swift in Sources */,
+				A895A68127ACC96E00FFA2AA /* HeroDetailAvatarCellConstants.swift in Sources */,
 				A895A64D27AC2B0C00FFA2AA /* DetailViewController.swift in Sources */,
 				A895A5AA27AAF50000FFA2AA /* HeroEntity.swift in Sources */,
 				A895A57127AAE6B200FFA2AA /* SceneDelegate.swift in Sources */,
@@ -898,6 +955,9 @@
 			files = (
 				A895A62627AB863200FFA2AA /* ListModelToEntityMapperTests.swift in Sources */,
 				A895A61C27AB812300FFA2AA /* HeroListNetworkTest.swift in Sources */,
+				A895A67A27ACC67700FFA2AA /* ShowHeroEventsUseCaseMock.swift in Sources */,
+				A895A68927ACD0FB00FFA2AA /* ListViewControllerTests.swift in Sources */,
+				A895A68B27ACD13000FFA2AA /* ListPresenterMock.swift in Sources */,
 				A895A66727AC481400FFA2AA /* ShowHeroEventsUseCaseTests.swift in Sources */,
 				A895A64627ABA1B100FFA2AA /* ErrorModelToEntityMapperTests.swift in Sources */,
 				A895A63027AB8B2800FFA2AA /* ShowHeroListUseCaseTests.swift in Sources */,
@@ -910,13 +970,17 @@
 				A895A63227AB8B6700FFA2AA /* HeroListRepositoryMock.swift in Sources */,
 				A895A61F27AB823900FFA2AA /* HeroModelToEntityMapperTests.swift in Sources */,
 				A895A63C27AB98C400FFA2AA /* HeroListCellTests.swift in Sources */,
+				A895A67C27ACC72C00FFA2AA /* DetailViewMock.swift in Sources */,
 				A895A62227AB827500FFA2AA /* XCTestCase+JSONLoader.swift in Sources */,
 				A895A58627AAE6B400FFA2AA /* MarvelListTests.swift in Sources */,
 				A895A66327AC462F00FFA2AA /* EventsToEntityMapperTests.swift in Sources */,
 				A895A60E27AB755100FFA2AA /* HeroListNSURLRestApiTests.swift in Sources */,
+				A895A67F27ACC92F00FFA2AA /* HeroDetailAvatarCellTests.swift in Sources */,
 				A895A62A27AB86EA00FFA2AA /* HeroListApiRepositoryTest.swift in Sources */,
-				A895A63727AB8F3300FFA2AA /* GetHeroesUseCaseMock.swift in Sources */,
+				A895A63727AB8F3300FFA2AA /* ShowHeroesUseCaseMock.swift in Sources */,
 				A895A61A27AB7CC400FFA2AA /* HeroListNetworkMock.swift in Sources */,
+				A895A67827ACC62000FFA2AA /* DetailPresenterTests.swift in Sources */,
+				A895A68527ACCD5400FFA2AA /* HeroDetailEventsCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

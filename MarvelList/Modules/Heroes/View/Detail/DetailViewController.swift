@@ -64,9 +64,12 @@ class DetailViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
         ])
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "generic")
-        tableView.register(HeroDetailAvatarCell.self, forCellReuseIdentifier: "AvatarCell")
-        tableView.register(HeroDetailEventsCell.self, forCellReuseIdentifier: "EventsCell")
+        tableView.register(UITableViewCell.self,
+                           forCellReuseIdentifier: DetailConstants.genericIdentifier)
+        tableView.register(HeroDetailAvatarCell.self,
+                           forCellReuseIdentifier: DetailConstants.avatarIdentifier)
+        tableView.register(HeroDetailEventsCell.self,
+                           forCellReuseIdentifier: DetailConstants.eventIdentifier)
         
     }
 }
@@ -79,12 +82,12 @@ extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch DetailViewCellType.allCases[indexPath.row] {
         case .avatar:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AvatarCell", for: indexPath) as! HeroDetailAvatarCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: DetailConstants.avatarIdentifier, for: indexPath) as! HeroDetailAvatarCell
             cell.prepare(with: avatarImage ?? UIImage())
             cell.selectionStyle = .none
             return cell
         case .description:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "generic", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: DetailConstants.genericIdentifier, for: indexPath)
             cell.textLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
             cell.textLabel?.adjustsFontSizeToFitWidth = true
             cell.textLabel?.numberOfLines = .zero
@@ -92,7 +95,7 @@ extension DetailViewController: UITableViewDataSource {
             cell.textLabel?.text = hero?.description
             return cell
         case .events:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "EventsCell", for: indexPath) as! HeroDetailEventsCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: DetailConstants.eventIdentifier, for: indexPath) as! HeroDetailEventsCell
             cell.prepare(with: events ?? [])
             return cell
         }
@@ -114,7 +117,7 @@ extension DetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         switch DetailViewCellType.allCases[indexPath.row] {
         case .avatar:
-            return 300
+            return DetailConstants.avatarRowHeight
         case .description:
             return UITableView.automaticDimension
         case .events:
@@ -126,7 +129,7 @@ extension DetailViewController: UITableViewDelegate {
 extension DetailViewController: DetailView {
     func loadEvents(_ events: [Event]) {
         if events.isEmpty {
-            self.events = [Event(name: "El heroe no tiene eventos destacados :(")]
+            self.events = [Event(name: DetailConstants.noEventsText)]
             return
         }
         self.events = events
@@ -134,7 +137,7 @@ extension DetailViewController: DetailView {
     
     func showError(_ error: ErrorModel) {
         let alert = UIAlertController(title: error.title, message: error.description, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: ListConstants.errorCloseButton, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: DetailConstants.errorCloseButton, style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     

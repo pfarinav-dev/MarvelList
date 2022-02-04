@@ -31,7 +31,7 @@ class HeroListCellTests: XCTestCase {
     func testAssignImageShouldChangeImageContainer() {
         sut.prepare()
         let image = UIImage()
-        sut.imageContainer.image = image
+        sut.image = image
         let imageContainer = sut.subviews[0].subviews[0] as! UIImageView
         XCTAssertEqual(imageContainer.image, image)
     }

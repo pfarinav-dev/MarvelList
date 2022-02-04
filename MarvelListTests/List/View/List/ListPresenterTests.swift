@@ -5,18 +5,17 @@
 //  Created by Patricio Fariña on 03-02-22.
 //
 
-
 import XCTest
 @testable import MarvelList
 
 class ListPresenterTests: XCTestCase {
     var sut: ListPresenter!
-    var useCase: GetHeroesUseCaseMock!
+    var useCase: ShowHeroesUseCaseMock!
     var listView: ListViewMock!
     
     override func setUp() {
         super.setUp()
-        useCase = GetHeroesUseCaseMock()
+        useCase = ShowHeroesUseCaseMock()
         listView = ListViewMock()
         sut = ListPresenter(useCase: useCase)
         sut.view = listView

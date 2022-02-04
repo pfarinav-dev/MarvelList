@@ -8,21 +8,28 @@
 import UIKit
 
 class HeroDetailEventsCell: UITableViewCell {
+    typealias HDConstants = HeroDetailEventsCellConstants
     private let title = UILabel(frame: .zero)
     private let eventsContainer = UIStackView(frame: .zero)
     private(set) var eventsLoaded = false
     
     private func prepareTitle() {
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.text = "Eventos Destacados"
-        title.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        title.text = HDConstants.title
+        title.font = HDConstants.titleFont
         title.textAlignment = .left
         
         contentView.addSubview(title)
         
         NSLayoutConstraint.activate([
-            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20)
+            title.leadingAnchor.constraint(
+                equalTo: contentView.leadingAnchor,
+                constant: HDConstants.Anchors.Title.leading
+            ),
+            title.topAnchor.constraint(
+                equalTo: contentView.topAnchor,
+                constant: HDConstants.Anchors.Title.top
+            )
         ])
     }
     
@@ -37,21 +44,33 @@ class HeroDetailEventsCell: UITableViewCell {
         
         eventsContainer.translatesAutoresizingMaskIntoConstraints = false
         eventsContainer.axis = .vertical
-        eventsContainer.spacing = 10
+        eventsContainer.spacing = HDConstants.stackViewSpacing
         for event in events {
             let label = UILabel(frame: .zero)
-            label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
-            label.text = "· \(event.name)"
+            label.font = HDConstants.eventFont
+            label.text = String(format: HDConstants.eventText, event.name)
             eventsContainer.addArrangedSubview(label)
         }
         
         contentView.addSubview(eventsContainer)
         
         NSLayoutConstraint.activate([
-            eventsContainer.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            eventsContainer.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 20),
-            eventsContainer.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            eventsContainer.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
+            eventsContainer.leadingAnchor.constraint(
+                equalTo: contentView.leadingAnchor,
+                constant: HDConstants.Anchors.Event.leading
+            ),
+            eventsContainer.topAnchor.constraint(
+                equalTo: title.bottomAnchor,
+                constant: HDConstants.Anchors.Event.top
+            ),
+            eventsContainer.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
+                constant: HDConstants.Anchors.Event.trailing
+            ),
+            eventsContainer.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor,
+                constant: HDConstants.Anchors.Event.bottom
+            ),
         ])
     }
 }
