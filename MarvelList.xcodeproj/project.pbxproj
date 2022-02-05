@@ -101,6 +101,7 @@
 		A895A68F27ACD9E000FFA2AA /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68E27ACD9E000FFA2AA /* DetailViewControllerTests.swift */; };
 		A895A69127ACDA2900FFA2AA /* DetailPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A69027ACDA2900FFA2AA /* DetailPresenterMock.swift */; };
 		A895A69327ADBAA100FFA2AA /* ThumbnailLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A69227ADBAA100FFA2AA /* ThumbnailLoaderTests.swift */; };
+		A895A69627AE213400FFA2AA /* ViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A69527AE213400FFA2AA /* ViewControllerFactoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,7 @@
 		A895A68E27ACD9E000FFA2AA /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		A895A69027ACDA2900FFA2AA /* DetailPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterMock.swift; sourceTree = "<group>"; };
 		A895A69227ADBAA100FFA2AA /* ThumbnailLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailLoaderTests.swift; sourceTree = "<group>"; };
+		A895A69527AE213400FFA2AA /* ViewControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -652,6 +654,7 @@
 		A895A64127AB9E8A00FFA2AA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A895A69427AE210500FFA2AA /* Factory */,
 				A895A64227AB9E9A00FFA2AA /* Infrastructure */,
 			);
 			path = Core;
@@ -768,6 +771,14 @@
 				A895A68427ACCD5400FFA2AA /* HeroDetailEventsCellTests.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A895A69427AE210500FFA2AA /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				A895A69527AE213400FFA2AA /* ViewControllerFactoryTests.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -994,6 +1005,7 @@
 				A895A67F27ACC92F00FFA2AA /* HeroDetailAvatarCellTests.swift in Sources */,
 				A895A62A27AB86EA00FFA2AA /* HeroListApiRepositoryTest.swift in Sources */,
 				A895A63727AB8F3300FFA2AA /* ShowHeroesUseCaseMock.swift in Sources */,
+				A895A69627AE213400FFA2AA /* ViewControllerFactoryTests.swift in Sources */,
 				A895A61A27AB7CC400FFA2AA /* HeroListNetworkMock.swift in Sources */,
 				A895A67827ACC62000FFA2AA /* DetailPresenterTests.swift in Sources */,
 				A895A68527ACCD5400FFA2AA /* HeroDetailEventsCellTests.swift in Sources */,
