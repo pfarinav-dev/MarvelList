@@ -10,19 +10,24 @@ import UIKit
 let dataCache = NSCache<NSString, NSData>()
 
 class ThumbnailLoader {
-    func load(_ url: URL, completionHandler: @escaping(Data) -> Void) -> URLSessionDataTask? {
-        if let cachedData = dataCache.object(forKey: url.absoluteString as NSString) {
+    
+    var session: URLSession = URLSession.shared
+    var cache: NSCache<NSString, NSData> = dataCache
+    
+    func load(_ url: URL, completionHandler: @escaping(Data?) -> Void) -> URLSessionDataTask? {
+        if let cachedData = cache.object(forKey: url.absoluteString as NSString) {
             let data = cachedData as Data
             completionHandler(data)
             return nil
         }
         
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
+        let task = session.dataTask(with: url, completionHandler: { data, response, error in
             guard let data = data else {
+                completionHandler(data)
                 return
             }
         
-            dataCache.setObject(data as NSData, forKey: url.absoluteString as NSString)
+            self.cache.setObject(data as NSData, forKey: url.absoluteString as NSString)
             completionHandler(data)
         })
 

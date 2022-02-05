@@ -100,6 +100,7 @@
 		A895A68D27ACD2DE00FFA2AA /* NavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68C27ACD2DE00FFA2AA /* NavigationControllerMock.swift */; };
 		A895A68F27ACD9E000FFA2AA /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A68E27ACD9E000FFA2AA /* DetailViewControllerTests.swift */; };
 		A895A69127ACDA2900FFA2AA /* DetailPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A69027ACDA2900FFA2AA /* DetailPresenterMock.swift */; };
+		A895A69327ADBAA100FFA2AA /* ThumbnailLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895A69227ADBAA100FFA2AA /* ThumbnailLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +220,7 @@
 		A895A68C27ACD2DE00FFA2AA /* NavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerMock.swift; sourceTree = "<group>"; };
 		A895A68E27ACD9E000FFA2AA /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		A895A69027ACDA2900FFA2AA /* DetailPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterMock.swift; sourceTree = "<group>"; };
+		A895A69227ADBAA100FFA2AA /* ThumbnailLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -591,6 +593,7 @@
 			children = (
 				A895A62127AB827500FFA2AA /* XCTestCase+JSONLoader.swift */,
 				A895A62327AB83AC00FFA2AA /* Equatables.swift */,
+				A895A69227ADBAA100FFA2AA /* ThumbnailLoaderTests.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -965,6 +968,7 @@
 				A895A62627AB863200FFA2AA /* ListModelToEntityMapperTests.swift in Sources */,
 				A895A61C27AB812300FFA2AA /* HeroListNetworkTest.swift in Sources */,
 				A895A67A27ACC67700FFA2AA /* ShowHeroEventsUseCaseMock.swift in Sources */,
+				A895A69327ADBAA100FFA2AA /* ThumbnailLoaderTests.swift in Sources */,
 				A895A68927ACD0FB00FFA2AA /* ListViewControllerTests.swift in Sources */,
 				A895A68B27ACD13000FFA2AA /* ListPresenterMock.swift in Sources */,
 				A895A66727AC481400FFA2AA /* ShowHeroEventsUseCaseTests.swift in Sources */,

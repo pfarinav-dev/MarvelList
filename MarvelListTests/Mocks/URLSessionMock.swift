@@ -10,11 +10,13 @@ import Foundation
 class URLSessionMock: URLSession {
     var data: Data?
     var error: Error?
+    var dataTaskCalled = false
     
     override func dataTask(
         with url: URL,
         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return URLSessionDataTaskMock {
+            self.dataTaskCalled = true
             completionHandler(self.data, nil, self.error)
         }
     }
@@ -23,6 +25,7 @@ class URLSessionMock: URLSession {
         with request: URLRequest,
         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return URLSessionDataTaskMock {
+            self.dataTaskCalled = true
             completionHandler(self.data, nil, self.error)
         }
     }

@@ -128,8 +128,10 @@ extension ListViewController: UITableViewDataSource {
             cell.name = displayedHeroes[indexPath.row].name
             if let url = URL(string: displayedHeroes[indexPath.row].thumbnail) {
                 let task = thumbnailLoader.load(url) { data in
-                    DispatchQueue.main.async {
-                        cell.image = UIImage(data: data)
+                    if let data = data {
+                        DispatchQueue.main.async {
+                            cell.image = UIImage(data: data)
+                        }
                     }
                 }
                 cell.thumbnailTask = task
