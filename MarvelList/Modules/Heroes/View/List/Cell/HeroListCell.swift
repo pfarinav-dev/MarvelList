@@ -27,7 +27,7 @@ class HeroListCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageContainer.image = HeroListCellConstants.defaultImage
+        image = HeroListCellConstants.defaultImage
         thumbnailTask?.cancel()
     }
     

@@ -8,6 +8,7 @@ import Foundation
 
 class URLSessionDataTaskMock: URLSessionDataTask {
     private let closure: () -> Void
+    var isCancelled = false
     
     init(closure: @escaping () -> Void) {
         self.closure = closure
@@ -15,6 +16,10 @@ class URLSessionDataTaskMock: URLSessionDataTask {
     
     override func resume() {
         closure()
+    }
+    
+    override func cancel() {
+        isCancelled = true
     }
 }
 

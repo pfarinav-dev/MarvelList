@@ -11,7 +11,6 @@ class ListPresenter: ListPresenterProtocol {
     weak var view: ListView?
     
     private let useCase: UseCase<HeroList>
-    
     private var isFetching = false
     
     init(useCase: UseCase<HeroList>) {

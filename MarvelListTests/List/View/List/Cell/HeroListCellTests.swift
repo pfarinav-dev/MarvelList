@@ -35,4 +35,19 @@ class HeroListCellTests: XCTestCase {
         let imageContainer = sut.subviews[0].subviews[0] as! UIImageView
         XCTAssertEqual(imageContainer.image, image)
     }
+    
+    func testPrepareForReuseShouldSetDefaultImageAndCancelTask() {
+        let task = URLSessionDataTaskMock {}
+        let image = UIImage()
+        let defaultImage = HeroListCellConstants.defaultImage
+        
+        sut.image = image
+        sut.thumbnailTask = task
+        
+        sut.prepareForReuse()
+        
+        XCTAssertTrue(task.isCancelled)
+        XCTAssertEqual(sut.image, defaultImage)
+        
+    }
 }

@@ -43,5 +43,18 @@ class ListPresenterTests: XCTestCase {
         XCTAssertTrue(listView.showErrorCalled)
     }
     
+    func testCallWhileFetchingShouldNotCallUseCase() {
+        useCase.shouldComplete = false
+        let exp = expectation(forNotification: HLGHNotification, object: nil)
+        sut.getHeroes(offset: 0)
+        XCTAssertTrue(useCase.useCaseCalled)
+        useCase.useCaseCalled = false
+        
+        sut.getHeroes(offset: 0)
+        XCTAssertFalse(useCase.useCaseCalled)
+        
+        wait(for: [exp], timeout: 2)
+    }
+    
     
 }
