@@ -1,8 +1,3 @@
-###### Hola! Escribí este documento en inglés más que nada por estandarización. Como no es mi lenguaje nativo, algunas partes pueden parecer escritas en un *tono* el cual no es mi intención!. Por eso dejo este disclaimer aquí, en español <3
-
-# MarvelList
-Technical Challenge for OpenBank
-
 ## Build In
 - XCode 12.5
 - Swift 5
